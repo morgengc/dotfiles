@@ -4,14 +4,22 @@ eval `/usr/bin/dircolors -b ~/.dircolors`
 
 #eval $(/usr/bin/lesspipe)
 
-setterm -ulcolor bright yellow
-setterm -hbcolor bright red
+if [ -t 0 ]; then
+	#echo interactive
+	setterm -ulcolor bright yellow
+	setterm -hbcolor bright red
 
-# no core dumps, please
-ulimit -c 0
+	# no core dumps, please
+	ulimit -c 0
 
-# chinese
-#stty cs8 -istrip 
+	# chinese
+	#stty cs8 -istrip 
 
-stty pass8 
-#tty > /dev/null && stty -ixon -ixoff
+	stty pass8 
+	#tty > /dev/null && stty -ixon -ixoff
+else
+	#echo non-interactive
+	ulimit -c 0
+fi
+
+
