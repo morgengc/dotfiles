@@ -542,3 +542,5 @@ endfunction
 " set showtabline=1 " 2=always
 
 " vim:sw=2:ts=2
+set sw=4
+set ts=4
