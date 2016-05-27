@@ -6,10 +6,7 @@ export LESS=-MRiqscj5
 export PAGER=less
 #export GREP_OPTIONS="--binary-files=without-match"
 
-export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin:"$PATH":/usr/lib/xscreensaver
-
-. $HOME/bin/checkpath &>/dev/null
-
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin:"$PATH":/usr/lib/xscreensaver
 
 if test -n "$SSH_CONNECTION" ; then
 	export LANG=C

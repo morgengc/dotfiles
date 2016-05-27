@@ -17,5 +17,6 @@ SHELL_DIR=$HOME/.shell
 . $SHELL_DIR/shared_func
 . $SHELL_DIR/shared_alias
 . $SHELL_DIR/shared_rc
+. $SHELL_DIR/colors.sh
 . $SHELL_DIR/bash_prompt
 [[ -f $SHELL_DIR/shared_personal ]] && . $SHELL_DIR/shared_personal

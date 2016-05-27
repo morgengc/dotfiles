@@ -1,7 +1,5 @@
 #!/bin/bash
 
-. colors.sh
-
 # My Color Scheme
 if [ $UID -eq 0 ] ; then
 	Prompt="#"
