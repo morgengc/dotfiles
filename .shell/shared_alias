@@ -123,3 +123,24 @@ alias r-x='chmod 755'
 alias CO="./configure"
 alias CH="./configure --help"
 
+alias jps='jps | awk -f ~/.shell/alignColumn.awk | sort -n'
+alias ssh='ssh -t'
+
+# rm -> mv
+mkdir -p ~/.trash
+alias rm=trash
+alias ur=undelfile
+undelfile()
+{
+	mv -i ~/.trash/$@ ./
+}
+trash()
+{
+	mv $@ ~/.trash/
+}
+cleartrash()
+{
+	read -p "clear sure?[n]" confirm
+	[ $confirm == 'y' ] || [ $confirm == 'Y' ]  && /bin/rm -rf ~/.trash/*
+}
+
