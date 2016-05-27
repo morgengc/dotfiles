@@ -6,7 +6,7 @@ dotfiles.zip是本项目中所有配置文件打包而成。
 ## 使用方法
 在用户根目录执行如下命令，然后重新启动terminal。
 ```
-wget https://raw.githubusercontent.com/morgengc/dotfiles/master/dotfiles.zip
+wget --no-check-certificate https://raw.githubusercontent.com/morgengc/dotfiles/master/dotfiles.zip
 unzip dotfiles.zip
 ```
 
