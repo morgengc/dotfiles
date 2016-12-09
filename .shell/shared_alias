@@ -144,5 +144,6 @@ cleartrash()
 	[ $confirm == 'y' ] || [ $confirm == 'Y' ]  && /bin/rm -rf ~/.trash/*
 }
 
-alias lsvn='~/.shell/svn-color.py status'
+alias svn='~/.shell/svn-color.py'
+alias lsvn='~/.shell/lsvn.sh'
 
