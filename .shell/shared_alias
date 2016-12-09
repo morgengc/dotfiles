@@ -144,3 +144,5 @@ cleartrash()
 	[ $confirm == 'y' ] || [ $confirm == 'Y' ]  && /bin/rm -rf ~/.trash/*
 }
 
+alias lsvn='~/.shell/svn-color.py status'
+
