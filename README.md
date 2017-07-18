@@ -1,5 +1,5 @@
 # dotfiles
-我在 Linux 下使用的 dotfiles。包括 shell 的配置和 vim 的配置。
+我在 Linux 下使用的 dotfiles。包括 shell 的配置和 vim 的配置。当使用 Ubuntu 时注意要 `apt-get install vim`，其他发行版未发现异常。
 
 dotfiles.zip 是本项目中所有配置文件打包而成。
 
