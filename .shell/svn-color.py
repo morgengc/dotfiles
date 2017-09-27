@@ -6,7 +6,7 @@
  Contact: phalkunz@gmail.com
  Date: May 23, 2009
  Modified: June 15, 2009
- 
+
  Additional modifications:
  Author: Phil Christensen (http://bubblehouse.org)
  Contact: phil@bubblehouse.org
@@ -17,9 +17,7 @@
  Date: September 27, 2017
 """
 
-import os, sys, re, subprocess
-
-tabsize = 4
+import sys, subprocess
 
 colorizedSubcommands = (
     'status',   # status
@@ -32,45 +30,36 @@ colorizedSubcommands = (
     'rm',       # delete
     'diff',     # diff
     'di',       # diff
+
 )
 
 statusColors = {
-    "M"     : "31",     # red 
-    "\?"    : "37",     # grey
-    "A"     : "32",     # green
-    "X"     : "33",     # yellow
-    "C"     : "30;41",  # black on red
-    "-"     : "31",     # red
-    "D"     : "31;1",   # bold red
-    "\+"    : "32",     # green
+    'M'     : "31",     # red
+    '?'     : "37",     # grey
+    'A'     : "32",     # green
+    'X'     : "33",     # yellow
+    'C'     : "30;41",  # black on red
+    '-'     : "31",     # red
+    'D'     : "31;1",   # bold red
+    '+'     : "32",     # green
 }
 
-def colorize(line): 
-    for color in statusColors:
-        if re.match(color, line):
-            return ''.join(('\033[01;', statusColors[color], 'm', line, '\033[00m'))
+def colorize(line):
+    for status in statusColors:
+        if line.startswith(status):
+            return ''.join(("\033[", statusColors[status], "m", line, "\033[m"))
     else:
         return line
 
-def escape(s):
-    s = s.replace('$', r'\$')
-    s = s.replace('"', r'\"')
-    s = s.replace('`', r'\`')
-    return s
-
-passthru = lambda x: x
-quoted = lambda x: '"%s"' % escape(x)
-
-if __name__ == "__main__":
-    cmd = ' '.join(['svn']+[(passthru, quoted)[' ' in arg](arg) for arg in sys.argv[1:]])
-    print(cmd)
-    output = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
-    cancelled = False
-    for line in output.stdout:
-        line = line.expandtabs(tabsize)
-        if(sys.argv[1] in colorizedSubcommands):
-            line = colorize(line)
-        try:
-            sys.stdout.write(line)
-        except:
-            sys.exit(1)
+if __name__ == '__main__':
+    command = sys.argv
+    command[0] = '/usr/bin/svn'
+    subcommand = '' if len(command) < 2 else command[1]
+    if subcommand in colorizedSubcommands and sys.stdout.isatty():
+        task = subprocess.Popen(command, stdout=subprocess.PIPE)
+        for line in task.stdout:
+            sys.stdout.write(colorize(line))
+    else:
+        task = subprocess.Popen(command)
+    task.communicate()
+    sys.exit(task.returncode)
