@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- encoding: utf-8 -*-
 
 """
  Author: Saophalkun Ponlu (http://phalkunz.com)
@@ -10,6 +11,10 @@
  Author: Phil Christensen (http://bubblehouse.org)
  Contact: phil@bubblehouse.org
  Date: February 22, 2010
+
+ Author: Gao Chao
+ Contact: gaochao.morgen@gmail.com
+ Date: September 27, 2017
 """
 
 import os, sys, re, subprocess
@@ -37,7 +42,7 @@ statusColors = {
 def colorize(line): 
     for color in statusColors:
         if re.match(color, line):
-            return ''.join(("\001\033[", statusColors[color], "m", line, "\033[m\002"))
+            return ''.join(('\033[01;', statusColors[color], 'm', line, '\033[00m'))
     else:
         return line
 
@@ -52,7 +57,7 @@ quoted = lambda x: '"%s"' % escape(x)
 
 if __name__ == "__main__":
     cmd = ' '.join(['svn']+[(passthru, quoted)[' ' in arg](arg) for arg in sys.argv[1:]])
-    print cmd
+    print(cmd)
     output = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
     cancelled = False
     for line in output.stdout:
