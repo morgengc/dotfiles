@@ -22,10 +22,16 @@ import os, sys, re, subprocess
 tabsize = 4
 
 colorizedSubcommands = (
-	'status',
-	'add',
-	'remove',
-	'diff',
+	'status',   # status
+    'stat',     # status
+    'st',       # status
+	'add',      # add
+    'delete',   # delete
+    'del',      # delete
+	'remove',   # delete
+    'rm',       # delete
+	'diff',     # diff
+    'di',       # diff
 )
 
 statusColors = {
