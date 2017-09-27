@@ -145,5 +145,6 @@ cleartrash()
 }
 
 alias svn='~/.shell/svn-color.py'
+alias snv='~/.shell/svn-color.py'
 alias lsvn='~/.shell/lsvn.sh'
 
