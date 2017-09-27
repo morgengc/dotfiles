@@ -22,15 +22,15 @@ import os, sys, re, subprocess
 tabsize = 4
 
 colorizedSubcommands = (
-	'status',   # status
+    'status',   # status
     'stat',     # status
     'st',       # status
-	'add',      # add
+    'add',      # add
     'delete',   # delete
     'del',      # delete
-	'remove',   # delete
+    'remove',   # delete
     'rm',       # delete
-	'diff',     # diff
+    'diff',     # diff
     'di',       # diff
 )
 
