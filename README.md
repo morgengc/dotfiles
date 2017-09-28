@@ -3,8 +3,8 @@
 
 ## 注意事项
 
-- 当使用 Ubuntu 时，确保 `apt-get install vim` 安装 vim。其他系统如RedHat/CentOS/Federa/Debian等均未发现异常。
-- 项目中包含了一些Python脚本，请使用 Python 2.x 版本。
+- 当使用 Ubuntu 时，确保 `apt-get install vim` 安装 vim。其他系统如 RedHat/CentOS/Federa/Debian 等均未发现异常。
+- 项目中包含了一些 Python 脚本，请使用 Python 2.x 版本。
 
 ## 使用方法
 
