@@ -10,10 +10,14 @@
 
 ```
 $ cd ~
+$ ./backup_dotfiles.sh
 $ wget --no-check-certificate https://raw.githubusercontent.com/morgengc/dotfiles/master/dotfiles.zip
-$ unzip dotfiles.zip
-# Logout & Re-login
+$ unzip dotfiles.zip (Input `A` to select "ALL")
+$ rm backup_dotfiles.sh
 ```
+退出当前 shell 后重新打开 shell 即可生效。
+
+**注意**：如果之前在 `.bashrc` 等文件中已经设置过环境变量，则手动将 `.backup/.bashrc` 的相应设置拷贝到 `.bashrc` 中即可。新建用户立即执行 dotfiles 就没有这些问题，所以推荐新建用户后立即执行 dotfiles。
 
 ## bash效果图
 
