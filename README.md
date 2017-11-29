@@ -18,9 +18,9 @@ $ /bin/bash install.sh
 
 ## bash效果图
 
-![image](https://github.com/morgengc/dotfiles/blob/master/doc/bash.png)
+![image](https://github.com/morgengc/dotfiles/blob/master/image/bash.png)
 
 ## vim效果图
 
-![image](https://github.com/morgengc/dotfiles/blob/master/doc/vim.png)
+![image](https://github.com/morgengc/dotfiles/blob/master/image/vim.png)
 
