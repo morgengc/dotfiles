@@ -13,7 +13,7 @@
 $ cd ~
 $ ./backup_dotfiles.sh
 $ wget --no-check-certificate https://raw.githubusercontent.com/morgengc/dotfiles/master/dotfiles.zip
-$ unzip dotfiles.zip (Input `A` to select "ALL")
+$ unzip -o dotfiles.zip
 $ rm backup_dotfiles.sh
 ```
 退出当前 shell 后重新打开 shell 即可生效。
