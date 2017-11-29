@@ -1,5 +1,5 @@
 # dotfiles
-我在 Linux 下使用的 dotfiles。包括 shell 的配置和 vim 的配置。`dotfiles.zip` 是本项目中所有配置文件打包而成。
+我在 Linux 下使用的 dotfiles。包括 shell 的配置和 vim 的配置。
 
 ## 注意事项
 
@@ -10,11 +10,9 @@
 ## 使用方法
 
 ```
-$ cd ~
-$ ./backup_dotfiles.sh
-$ wget --no-check-certificate https://raw.githubusercontent.com/morgengc/dotfiles/master/dotfiles.zip
-$ unzip -o dotfiles.zip
-$ rm backup_dotfiles.sh
+$ git clone https://github.com/morgengc/dotfiles.git
+$ cd dotfiles
+$ /bin/bash install.sh
 ```
 退出当前 shell 后重新打开 shell 即可生效。
 
