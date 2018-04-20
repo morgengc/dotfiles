@@ -6,8 +6,8 @@ eval `/usr/bin/dircolors -b ~/.dircolors`
 
 if [ -t 0 ]; then
 	#echo interactive
-	setterm -ulcolor bright yellow
-	setterm -hbcolor bright red
+	#setterm -ulcolor bright yellow
+	#setterm -hbcolor bright red
 
 	# no core dumps, please
 	ulimit -c 0
