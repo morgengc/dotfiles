@@ -11,3 +11,4 @@
 /bin/bash ./create_zip.sh
 unzip -o dotfiles.zip -d ~
 chmod a+x ~/.shell/svn-color.py
+chmod a+x ~/.shell/lsvn.sh
