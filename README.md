@@ -9,21 +9,26 @@
 
 ## 使用方法
 
-如果使用的是 RedHat 系的发型版，如 RedHat/CentOS/Federa 等，可以按如下步骤执行。
+如果使用的是 RedHat 系的发行版，如 RedHat/CentOS/Federa 等，可以按如下步骤执行：
 
 ```
-$ sudo yum install git
-$ sudo yum install subversion
-$ sudo yum install zip
-$ sudo yum install vim
+$ sudo yum install git subversion zip vim
 
 $ git clone https://github.com/morgengc/dotfiles.git
 $ cd dotfiles
 $ /bin/bash install.sh
 ```
-退出当前 shell 后重新打开 shell 即可生效。
 
-**注意**:当使用 Debian 系发行版时，比如 Debian/Ubuntu 时，使用 `sudo apt-get install` 代替 `sudo yum install` 即可。
+如果使用的是 Debian 系的发行版，比如 Debian/Ubuntu 时，可以使用如下步骤执行：
+```
+$ sudo apt-get install git subversion zip vim
+
+$ git clone https://github.com/morgengc/dotfiles.git
+$ cd dotfiles
+$ /bin/bash install.sh
+```
+
+退出当前 shell 后重新打开 shell 即可生效。
 
 ## bash效果图
 
